@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-light shadow-sm">
+    <div class="container-fluid">
+      <!-- Sidebar Toggle Button -->
+      <button class="menu-btn" (click)="toggleSidebar()">☰</button>
+      <a class="navbar-brand" href="#">Sakshi Designer Hub</a>
+
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <input
+          type="text"
+          placeholder="Search services..."
+          [(ngModel)]="searchQuery"
+          (input)="filterServices()"
+          (keyup.enter)="navigateToService()"
+        />
+        <i class="bx bx-search search-icon"></i>
+
+        <!-- Show search results -->
+        <ul class="search-results" *ngIf="filteredServices.length">
+          <li *ngFor="let service of filteredServices" (click)="selectService(service)">
+            {{ service.title }}
+          </li>
+        </ul>
+      </div>
+    </div> <!-- ✅ Closing `.container-fluid` properly -->
+  </nav> <!-- ✅ Closing `<nav>` properly -->
+
+
+  <!-- Sidebar -->
+  <!-- Sidebar -->
+<div class="sidebar" [class.active]="isSidebarActive">
+  <button class="menu-btn inside-btn" (click)="toggleSidebar()">☰ Menus</button>
+  <ul class="menu-list">
+    <li *ngFor="let item of menuItems; let last = last" [ngClass]="{'bottom-item': last}">
+      <a [routerLink]="item.route">
+        <i [class]="item.icon"></i>
+        <span>{{ item.name }}</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- Overlay -->
+<div class="sidebar-overlay" (click)="toggleSidebar()"></div>
+
+
+
+</body>
+</html>

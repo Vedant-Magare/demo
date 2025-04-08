@@ -1,0 +1,91 @@
+/* Gradient Background */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+
+
+
+/* Login Box */
+.login-box {
+  background:rgba(161, 61, 136, 0.281); /* Glassmorphism effect */
+  backdrop-filter: blur(12px);
+  padding: 35px;
+  width: 380px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Title */
+.login-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Fields */
+.form-control {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 1rem;
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.3);
+  color: #333;
+  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.1),
+              inset -4px -4px 8px rgba(255, 255, 255, 0.5);
+  transition: 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+/* Button */
+.btn-primary {
+  background-image: linear-gradient(to right, #2575fc, #6a11cb);
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  color: white;
+  cursor: pointer;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+  background-image: linear-gradient(to right, #6a11cb, #2575fc);
+  transform: scale(1.05);
+}
+
+/* Forgot Password */
+.forgot-password {
+  font-size: 0.9rem;
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  margin-top: 12px;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+  color: #ddd;
+}
+
+/* Error Message */
+.text-danger {
+  color: red;
+  font-size: 14px;
+}

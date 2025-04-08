@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="contact-container">
+    <div class="contact-box">
+      <h2 class="contact-title"><i class="bx bx-envelope"></i> Contact Us</h2>
+
+      <form>
+        <div class="form-group">
+          <label for="name"><i class="bx bx-user"></i> Name</label>
+          <input type="text" id="name" class="form-control" [(ngModel)]="contact.name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email"><i class="bx bx-envelope"></i> Email</label>
+          <input type="email" id="email" class="form-control" [(ngModel)]="contact.email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone"><i class="bx bx-phone"></i> Phone</label>
+          <input type="tel" id="phone" class="form-control" [(ngModel)]="contact.phone" name="phone" required />
+        </div>
+
+        <div class="form-group">
+          <label for="subject"><i class="bx bx-comment-detail"></i> Subject</label>
+          <input type="text" id="subject" class="form-control" [(ngModel)]="contact.subject" name="subject" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message"><i class="bx bx-message-dots"></i> Message</label>
+          <textarea id="message" class="form-control" rows="4" [(ngModel)]="contact.message" name="message" required></textarea>
+        </div>
+
+        <button type="button" (click)="sendMessage()" class="btn-primary"><i class="bx bx-send"></i> Send Message</button>
+      </form>
+    </div>
+  </div>
+
+
+
+</body>
+</html>

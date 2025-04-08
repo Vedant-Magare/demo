@@ -1,0 +1,414 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  box-sizing: border-box;
+  color: black; /* Set default text color to black */
+}
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  min-height: 100vh;
+  /* background: linear-gradient(to right, #2c3e50, #4ca1af); */
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+  color: black; /* Changed text color */
+  padding: 5% 10%;
+  gap: 50px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 50%;
+}
+
+.hero-text {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: black; /* Ensuring text remains black */
+}
+
+.hero-paragraph {
+  font-size: 1.3rem;
+  color: black; /* Changed from light grey to black */
+  line-height: 1.6;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  max-width: 80%;
+  height: auto;
+  min-width: 300px;
+  min-height: 200px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  object-fit: contain;
+}
+
+.dynamic-box {
+  background: rgba(173, 216, 230, 0.9);
+  padding: 20px;
+  border-radius: 50px;
+  text-align: center;
+  position: relative;
+  margin-top: 20px;
+  animation: fadeIn 2s ease-in-out;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: black; /* Text inside dynamic box should also be black */
+}
+
+.dynamic-box-wrapper {
+  background: rgba(173, 216, 230, 0.2);
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  margin-top: 20px;
+  animation: fadeIn 2s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  width: 100%;
+  max-width: 800px;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: black; /* Ensuring all text inside this wrapper remains black */
+}
+
+/* Ensuring child content doesn't break the layout */
+.dynamic-box-wrapper app-dynamic-window {
+  display: block;
+  width: 100%;
+}
+
+app-footer-bar {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-text {
+    font-size: 2.5rem;
+  }
+
+  .hero-paragraph {
+    font-size: 1.2rem;
+  }
+
+  .hero-image img {
+    width: 80%;
+    min-width: 250px;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.hero-section {
+  flex: 1;
+}
+
+app-footer-bar {
+  width: 100%;
+  margin-top: auto;
+  padding: 0;
+  border-top: none;
+}
+
+/* Main Container */
+.content-box {
+  background: linear-gradient(to right, #dff6ff, #bde0fe);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  color: black; /* Black text inside content box */
+}
+
+/* Title Styling */
+.content-box h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: black; /* Title changed to black */
+  margin-bottom: 20px;
+  text-shadow: none; /* Removed the white shadow to keep it clean */
+}
+
+/* Dynamic Content Box */
+.dynamic-box {
+  background: rgba(173, 216, 230, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out;
+  backdrop-filter: blur(10px);
+  color: black; /* Ensuring text inside remains black */
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Read More Button */
+.btn-read-more {
+  background: linear-gradient(to right, #ff7e5f, #ff2d55);
+  color: black; /* Changed button text color to black */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-read-more:hover {
+  background: linear-gradient(to right, #ff2d55, #ff7e5f);
+  transform: scale(1.05);
+  box-shadow: 0px 5px 15px rgba(255, 75, 43, 0.4);
+}
+
+/* Services Section Styling */
+/* Services Section */
+.services-section {
+  background: #f4f4f4;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Increased gap between boxes */
+  flex-wrap: wrap;
+  padding: 20px; /* Added padding for extra spacing */
+}
+
+.service-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
+  width: 320px; /* Increased width for better alignment */
+  text-align: center;
+  margin-bottom: 20px; /* Added bottom margin to separate rows */
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-content h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.service-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.btn-read-more {
+  background: linear-gradient(to right, #ff7e5f, #ff2d55);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-read-more:hover {
+  background: linear-gradient(to right, #ff2d55, #ff7e5f);
+  transform: scale(1.05);
+}
+
+/* Scroll Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.reveal {
+  animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+
+/* Common Styling */
+.courses-section {
+  background: #f4f4f4;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Grid Layout - 4 Courses in a Row */
+.courses-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Course Card Styling */
+.course-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.course-img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* Text Styling */
+.course-content h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.course-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Button Styling */
+.btn-read-more {
+  background: linear-gradient(to right, #ff7e5f, #ff2d55);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-read-more:hover {
+  background: linear-gradient(to right, #ff2d55, #ff7e5f);
+  transform: scale(1.05);
+}
+/* Initially hidden */
+.course-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  visibility: hidden;
+}
+
+/* Animation applied when in viewport */
+.course-card.reveal {
+  animation: fadeInUp 0.8s ease-in-out forwards;
+  visibility: visible;
+}
+
+/* Keyframes for smooth fade-in */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .courses-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .courses-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+

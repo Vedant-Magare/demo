@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Design Hub</title>
+    <link rel="stylesheet" href="home.component.css">
+</head>
+<body>
+
+    <!-- Hero Section -->
+
+    <div class="content-wrapper">
+      <div class="hero-section">
+          <div class="hero-content">
+              <h1 class="hero-text">Welcome to Sakshi Designing Hub</h1>
+              <div class="content-box">
+                <!-- <h1>Welcome to Sakshi Designing Hub</h1> -->
+                <div class="dynamic-box">
+                  <h3>{{ currentContent.title }}</h3>
+                  <p>{{ currentContent.text }}</p>
+                  <button class="btn-read-more">Read More</button>
+                </div>
+              </div>
+
+
+                 <!--  <app-dynamic-window></app-dynamic-window> -->
+
+          </div>
+          <div class="hero-image">
+              <img src="assets/images/homeImage.webp" alt="Creative Designing" class="img-fluid">
+          </div>
+      </div>
+  </div>
+
+
+<!-- We Provide Services Section -->
+
+<!-- Services Section -->
+<section class="services-section">
+  <div class="container">
+    <h2 class="section-title">We Provide Services</h2>
+    <div class="row">
+      <div *ngFor="let service of services" class="col-md-4">
+        <div class="service-card">
+          <img [src]="service.image" [alt]="service.title" class="service-img">
+          <div class="service-content">
+            <h3>{{ service.title }}</h3>
+            <p>{{ service.description }}</p>
+            <button class="btn-read-more">Read More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Courses/Internships Section -->
+<section class="courses-section">
+  <div class="container">
+    <h2 class="section-title">Courses & Internships</h2>
+    <div class="courses-container">
+      <div *ngFor="let course of courses" class="course-card">
+        <img [src]="course.image" [alt]="course.title" class="course-img">
+        <div class="course-content">
+          <h3>{{ course.title }}</h3>
+          <p>{{ course.description }}</p>
+          <button class="btn-read-more">Read More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+</body>
+<app-footer-bar></app-footer-bar>
+</html>
